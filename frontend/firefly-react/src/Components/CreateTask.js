@@ -1,32 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import TaskCard from "./TaskCard";
+// import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 
 const CreateTask = () => {
   let [name, setName] = useState("");
   let [description, setDescription] = useState("");
+  let [tasks, setTasks] = useState([]);
 
-  // useEffect(() => {
-    
-  // }
+  const fetchTasks = () => async dispatch => {
+    axios.get("http://localhost:8080/tasks").then((res) => console.log(res));
+    console.log(tasks);
+  }
 
-  // const fetchTasks = (e) => {
-
-  // }
+  useEffect(() => {
+    axios.get("http://localhost:8080/tasks").then((res) => setTasks(res.data));
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTask = {
-      name,
-      description,
+      taskName: name,
+      taskDescription: description
     };
 
-    console.log(newTask);
-
-    // createEntry(newEntry, this.props.history);
-    // alert("New Entry Successfully Created.");
-  };
+    axios.post("http://localhost:8080/addTask", newTask).then((res)=>{
+      console.log(res)
+    })
+  }
 
   return (
     <div className="dashboard">
@@ -69,7 +71,12 @@ const CreateTask = () => {
             <hr />
             <h2>All TASKS</h2>
             <hr />
-
+            <div className="tasks">
+            
+              {tasks.map((task) => (
+                <TaskCard task={task}/>
+              ))}
+            </div>
           </div>
         </div>
       </div>
