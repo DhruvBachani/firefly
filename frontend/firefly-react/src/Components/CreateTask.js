@@ -74,7 +74,7 @@ const CreateTask = () => {
             <div className="tasks">
             
               {tasks.map((task) => (
-                <TaskCard task={task}/>
+                <TaskCard key={task.taskId} task={task}/>
               ))}
             </div>
           </div>

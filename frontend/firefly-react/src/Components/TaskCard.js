@@ -5,7 +5,6 @@ const TaskCard = ({ task }) => {
   return (
     <div className="">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{task.taskName}</Card.Title>
           <Card.Text>
@@ -14,7 +13,6 @@ const TaskCard = ({ task }) => {
           <button variant="primary">Select</button>
         </Card.Body>
       </Card>
-      <h5>{task.taskName}</h5>
     </div>
   );
 };

@@ -25,7 +25,7 @@ app.use(
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "Jarvis5252",
+    password: "root",
     database: "firefly"
 
 })
