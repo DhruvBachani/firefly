@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Custom CSS */
+
+.dashboard {
+  color: black;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
+}
