@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import CreateTask from "./Components/CreateTask";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
