@@ -9,11 +9,6 @@ const CreateTask = () => {
   let [description, setDescription] = useState("");
   let [tasks, setTasks] = useState([]);
 
-  const fetchTasks = () => async dispatch => {
-    axios.get("http://localhost:8080/tasks").then((res) => console.log(res));
-    console.log(tasks);
-  }
-
   useEffect(() => {
     axios.get("http://localhost:8080/tasks").then((res) => setTasks(res.data));
   })

@@ -14,7 +14,6 @@ const TaskCard = ({ task }) => {
           <button variant="primary">Select</button>
         </Card.Body>
       </Card>
-      <h5>{task.taskName}</h5>
     </div>
   );
 };
