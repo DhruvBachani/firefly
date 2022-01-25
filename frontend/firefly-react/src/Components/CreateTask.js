@@ -1,29 +1,23 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TaskCard from "./TaskCard";
 // import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 
 const CreateTask = () => {
   let [name, setName] = useState("");
   let [description, setDescription] = useState("");
-  let [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:8080/tasks").then((res) => setTasks(res.data));
-  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTask = {
       taskName: name,
-      taskDescription: description
+      taskDescription: description,
     };
 
-    axios.post("http://localhost:8080/addTask", newTask).then((res)=>{
-      console.log(res)
-    })
-  }
+    axios.post("http://localhost:8080/addTask", newTask).then((res) => {
+      console.log(res);
+    });
+  };
 
   return (
     <div className="dashboard">
@@ -62,16 +56,6 @@ const CreateTask = () => {
               <br />
               <button className="btn btn-primary">Create</button>
             </form>
-
-            <hr />
-            <h2>All TASKS</h2>
-            <hr />
-            <div className="tasks">
-            
-              {tasks.map((task) => (
-                <TaskCard key={task.taskId} task={task}/>
-              ))}
-            </div>
           </div>
         </div>
       </div>
