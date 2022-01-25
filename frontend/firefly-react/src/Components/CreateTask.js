@@ -78,8 +78,3 @@ const CreateTask = () => {
 };
 
 export default CreateTask;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> development
