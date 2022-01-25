@@ -1,14 +1,14 @@
 import "./App.css";
 import CreateTask from "./Components/CreateTask";
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    
-      <div className="App">
-        <CreateTask />
-      </div>
-    
+    <Router>
+        <Routes>
+        <Route exact path="/" element={<CreateTask />} />
+        </Routes>
+    </Router>
   );
 }
 
