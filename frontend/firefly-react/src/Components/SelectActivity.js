@@ -16,9 +16,16 @@ const SelectActivity = () => {
       <h2>All TASKS</h2>
       <hr />
       <div className="tasks">
-        {tasks.map((task) => (
-          <TaskCard key={task.taskId} task={task} />
-        ))}
+        <div className="row">
+          <div className="col-md-1"></div>
+          {tasks.map((task) => (
+            <div className="col-md-2">
+              <TaskCard key={task.taskId} task={task} />
+            </div>
+            
+          ))}
+          <div className="col-md-1"></div>
+        </div>
       </div>
     </div>
   );

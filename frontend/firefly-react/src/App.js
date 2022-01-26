@@ -6,6 +6,7 @@ import SelectActivity from "./Components/SelectActivity";
 
 function App() {
   return (
+    <div className="App">
     <Router>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/selectActivity" element={<SelectActivity />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 
