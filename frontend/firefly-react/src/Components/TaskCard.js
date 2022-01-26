@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const CardContainer = styled(motion.div)`
   width: 200px;
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -22,7 +22,7 @@ const TopContainer = styled.div`
   flex: 1;
   position: relative;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 1em 15px;
 `;
 
@@ -30,22 +30,6 @@ const BottomContainer = styled.div`
   display: flex;
   flex: 0.6;
   padding: 0 1em;
-`;
-
-const SelectButtonContainer = styled(motion.div)`
-  width: 200px;
-  height: 50px;
-  display: flex;
-  flex: 0.4;
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.2);
-  background-color: #16eef6;
-  position: relative;
-  cursor: default;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 `;
 
 const SelectText = styled.h4`
@@ -67,9 +51,9 @@ const TaskCard = ({ task }) => {
         <BottomContainer>
           <p>{task.taskDescription}</p>
         </BottomContainer>
-        <SelectButtonContainer>
-          <SelectText>Select</SelectText>
-        </SelectButtonContainer>
+        <div className="select-button-container">
+            <SelectText>Select</SelectText>
+        </div>
       </CardContainer>
     </div>
   );

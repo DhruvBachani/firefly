@@ -81,3 +81,22 @@
   cursor: grab;
 }
 
+.select-button-container {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.2);
+  background-color: #16eef6;
+  position: relative;
+  cursor: default;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.select-button-container:hover {
+  background: black;
+}
