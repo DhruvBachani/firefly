@@ -23,9 +23,9 @@ const SelectActivity = () => {
       </p>
       <div className="tasks">
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
+          <Grid container spacing={4}>
             {tasks.map((task) => (
-              <Grid item xs={2}>
+              <Grid item xs={4}>
                 <TaskCard key={task.taskId} task={task} />
               </Grid>
             ))}

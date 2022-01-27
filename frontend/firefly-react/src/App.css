@@ -59,14 +59,96 @@
   /* min-height: fit-content; */
 }
 
+
+/* Homepage content */
+
+
 .dashboard {
   color: black;
 }
+
+
+/* Navbar */
+
+
+/* .navbar-container {
+  height: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+} */
 
 .firefly-nav {
   background-color: #141d2b;
   min-width: fit-content;
 }
+
+.firefly-logo-container {
+  width: 20%;
+  align-content: center;
+}
+
+.firefly-logo {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 10;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.firefly-logo:hover {
+  background-color: #fff;
+}
+
+
+/* Sidebar */
+
+
+.firefly-sidebar {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  background-color:#141d2b;
+  transition: .5s ease;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25%;
+  width: 100%;
+}
+
+.sidebar-links-container {
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.sidebar-links-container:hover {
+  background-color: #16eef6;
+}
+
+.sidebar-links {
+  text-decoration: none;
+  font-family: system-ui;
+  font-size: larger;
+  font-weight: 600;
+  color: yellow;
+}
+
+
+/* Task Card */
 
 .activity-card {
   width: 285px;

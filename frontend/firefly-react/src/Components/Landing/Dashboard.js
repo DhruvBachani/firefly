@@ -1,18 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <nav className="navbar navbar-expand-sm navbar-dark firefly-nav mb-2">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              FIREFLY
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Sidebar />
+      <Navbar />
 
       <Link to={"/createTask"}>
         <button className="btn btn-primary mg-2">Create Activity</button>
