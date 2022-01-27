@@ -9,7 +9,7 @@ const OtherOrganizationsHomePage = () => {
       <Sidebar />
       <Navbar />
       <div className="organizations-home-page-container">
-        <div className="organizations-summary-container">
+        <div className="dashboard-main-container-common">
           <hr />
           <h2>Summary</h2>
           <hr />
