@@ -13,6 +13,21 @@ function Navbar() {
           FIREFLY
         </Link>
       </div>
+      <Link
+        className="firefly-logo"
+        to={"/login"}
+        style={{ textDecoration: "none" }}
+      >
+        Log In
+      </Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <Link
+        className="firefly-logo"
+        to={"/signUp"}
+        style={{ textDecoration: "none" }}
+      >
+        Sign Up
+      </Link>
     </nav>
   );
 }
