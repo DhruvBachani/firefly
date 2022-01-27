@@ -186,3 +186,28 @@
 .tasks {
   margin: 200px 300px;
 }
+
+
+/* Organizations */
+
+.organizations-home-page-container {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.organizations-summary-container {
+  width: 80%;
+}
+
+.summary-table-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.summary-table {
+  width: 60%;
+}

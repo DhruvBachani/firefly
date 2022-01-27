@@ -11,8 +11,8 @@ const Sidebar = (props) => {
           </Link>
         </div>
         <div className="sidebar-links-container">
-          <Link className="sidebar-links" to={"/dashboard"}>
-            Organisation
+          <Link className="sidebar-links" to={"/organizations"}>
+            Organisations
           </Link>
         </div>
         <div className="sidebar-links-container">
