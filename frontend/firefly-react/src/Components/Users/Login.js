@@ -11,10 +11,13 @@ const Login = () => {
       username: username,
       password: password,
     };
-    console.log(LoginRequest);
-    axios.post("", LoginRequest).then((res) => {
-      console.log(res);
+    axios.post("http://localhost:8080/login", LoginRequest).then((res) => {
+      localStorage.setItem("jwt-token", "Bearer "+ res.data.token)
+      
+    }).catch((err)=>{
+      alert(err.response.data.error)
     });
+    console.log(axios.defaults)
   };
 
   return (

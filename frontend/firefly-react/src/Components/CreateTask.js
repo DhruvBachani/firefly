@@ -13,9 +13,10 @@ const CreateTask = () => {
       taskName: name,
       taskDescription: description,
     };
-
     axios.post("http://localhost:8080/addTask", newTask).then((res) => {
       console.log(res);
+    }).catch((err) => {
+      alert(err.response.data.error)
     });
   };
 

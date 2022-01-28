@@ -10,7 +10,7 @@ const SelectActivity = () => {
 
   useEffect(() => {
     axios.get("http://localhost:8080/tasks").then((res) => setTasks(res.data));
-  });
+  }, []);
 
   return (
     <div className="volunteer">

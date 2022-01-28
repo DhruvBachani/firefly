@@ -1,25 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const [fullName, setFullName] = useState("");
+  const [firstName, setfirstName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [userType, setUserType] = useState("");
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUserAccount = {
-      fullName: fullName,
+      firstName: firstName,
       username: username,
       password: password,
       confirmPassword: confirmPassword,
       userType: userType,
     };
-    console.log(newUserAccount);
-    axios.post("", newUserAccount).then((res) => {
-      console.log(res);
+    axios.post("http://localhost:8080/register", newUserAccount).then((res) => {
+      navigate("/login")
+    }).catch((err) => {
+      alert(err.response.data.error)
     });
   };
 
@@ -37,9 +41,9 @@ const SignUp = () => {
                   type="text"
                   className="form-control form-control-lg"
                   placeholder="Full Name"
-                  name="fullName"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
+                  name="firstName"
+                  value={firstName}
+                  onChange={(e) => setfirstName(e.target.value)}
                 />
               </div>
               <div className="form-group">
@@ -81,6 +85,13 @@ const SignUp = () => {
                   type="radio"
                   name="userType"
                   value="Volunteer"
+                  onChange={(e) => setUserType(e.target.value)}
+                />
+                <label> &nbsp;Volunteer organization &nbsp; </label>
+                <input
+                  type="radio"
+                  name="userType"
+                  value="VolunteerOrg"
                   onChange={(e) => setUserType(e.target.value)}
                 />
               </div>
